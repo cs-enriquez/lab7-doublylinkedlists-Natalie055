@@ -1,31 +1,59 @@
 	#include "StudentList.h"
 
 	// Define a constructor to initialize the list. The list starts with no Students
-    StudentList::StudentList() {}
+    StudentList::StudentList(int num) {
+		head = nullptr;
+		tail = nullptr;
+		numstudents = 0;
+
+
+	}
 
 	// return the number of students currently in the list
 	int StudentList::listSize() {
-		return -1;
+		return numstudents;
 	}
 
 	//add a Node with a student to the front (head) of the list.
-	void StudentList::addFront(Student s) {}
+	void StudentList::addFront(Student s) {
+		Node *head = new Node();
+	}
 
 	//add a Node with a student to the back (tail) of the list.
-	void StudentList::addBack(Student s) {}
+	void StudentList::addBack(Student s) {
+		Node *tail = new Node(s)
+	}
 
 	//Print out the names of each student in the list.
-	void StudentList::printList() {}
+	void StudentList::printList() {
+		Node *curr = head;
+		while (curr != nullptr) {
+			cout << curr->data.name << endl;
+		}
+		curr = curr -> next;
+	}
 
 	// Remove the Node with the student at the back (tail) of the list
 	// should not fail if list is empty! Print an error message if this occurs
 	// Don't forget that your head and tail pointers will be null pointers if the list is empty
-	void StudentList::popBack() {}
+	void StudentList::popBack() {
+		if(tail == nullptr) {
+			cout << "ERROR! This list is empty!" << endl;
+		}
+		if(tail != nullptr) {
+			delete tail;
+		}
+	}
 
 	// Remove the Node with the student at the front (head) of the list
 	// should not fail if list is empty! Print an error message if this occurs
 	// Don't forget that your head and tail pointers will be null pointers if the list is empty
-	void StudentList::popFront() {}
+	void StudentList::popFront() {
+		if(head == nullptr) {
+			cout << "ERROR! This list is empty!" << endl;
+		}
+		if()
+	}
 
 	//insert a student at the position "index".
 	// for this list, count head as index 0
@@ -33,7 +61,9 @@
 	// print a message and insert the student at the back of the list
 	// the previous Node at your target index should be moved forward. "For exampe, Node with student at index i, becomes index i+1" 
 	// Remember that you already have methods that can add students to the front or back of list if needed! Don't repeat this code.
-	void StudentList::insertStudent(Student s, int index) {}
+	void StudentList::insertStudent(Student s, int index) {
+
+	}
 
 	//find the student with the given id number and return them
 	// if no student matches, print a message 
@@ -67,6 +97,6 @@
 	//Return this list.  The original (current) list should
 	//not be modified (do not remove the students from the original list).
 	StudentList StudentList::honorRoll(float minGPA) {
-		StudentList fixthis;
-		return fixthis;
+		StudentList ;
+		return ;
 	}
